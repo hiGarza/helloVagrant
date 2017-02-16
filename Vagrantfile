@@ -6,4 +6,7 @@ Vagrant.configure("2") do |config|
 		vb.memory = "512"
 	end
 
+	config.vm.network "forwarded_port", guest: 80, host: 8080
+	config.vm.network "public_network", type: "dhcp"
+
 end
